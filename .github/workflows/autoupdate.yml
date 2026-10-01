@@ -27,12 +27,12 @@ jobs:
 
       - name: Detect changes
         id: git-diff
-        uses: coatl-dev/actions/simple-git-diff@v7.0.14
+        uses: coatl-dev/actions/simple-git-diff@v7.1.1
 
       - name: Import GPG key
         if: ${{ steps.git-diff.outputs.diff == 'true' }}
         id: gpg-import
-        uses: coatl-dev/actions/gpg-import@v7.0.14
+        uses: coatl-dev/actions/gpg-import@v7.1.1
         with:
           passphrase: ${{ secrets.COATL_BOT_GPG_PASSPHRASE }}
           private-key: ${{ secrets.COATL_BOT_GPG_PRIVATE_KEY }}
