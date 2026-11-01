@@ -65,7 +65,7 @@ jobs:
           token: ${{ env.GITHUB_TOKEN }}
 
       - name: Download tarball
-        uses: actions/download-artifact@v8.0.1
+        uses: actions/download-artifact@v8.0.2
         with:
           name: python-tarball
           path: .
